@@ -41,7 +41,7 @@ export default function ChatInterface() {
     console.log("userMessages fetch: ", userMessages);
     const defaultMessage =     {
       role: 'assistant',
-      content: "Hello! I'm a Mental Health Support Bot offering confidential assistance. How are you feeling today? What would you like to discuss about your well-being?",
+      content: "Hello! I'm a  Multilingual Mental Health Support Bot offering confidential assistance. How are you feeling today? What would you like to discuss about your well-being?",
     };
     setMessages([defaultMessage, ...userMessages]);
   };
