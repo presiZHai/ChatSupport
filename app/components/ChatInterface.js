@@ -28,7 +28,7 @@ export default function ChatInterface() {
     } else {
       fetchMessages();
     }
-  }, [user, loading]);
+  }, [user, loading, fetchMessages, router]);
 
   const fetchMessages = async () => {
     const q = query(

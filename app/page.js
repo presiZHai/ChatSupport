@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <div style={styles.container}>
       <h1 style={{ ...styles.heading, textAlign: 'center', color: '#4CAF50' }}>
-        You're welcome! I am a Multilingual Mental Health Support Bot.<br />
-        Talk to me; you're in a safe space.
+        You are welcome! I am a Multilingual Mental Health Support Bot.<br />
+        Talk to me; you are in a safe space.
       </h1>
       <SignUp />
       <p style={styles.paragraph}>
