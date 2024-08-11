@@ -37,5 +37,5 @@ const auth = getAuth(app);
 //     console.error('Error initializing Firebase Analytics:', err);
 //   });
 // }
-
+// Disable analytics
 export { auth, firestore, firebaseConfig,  }; //analytics
