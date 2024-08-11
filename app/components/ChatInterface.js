@@ -21,15 +21,6 @@ export default function ChatInterface() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(() => {
-    if (loading) return;
-    if (!user) {
-      router.push("/sign-in");
-    } else {
-      fetchMessages();
-    }
-  }, [user, loading, fetchMessages, router]);
-
   const fetchMessages = async () => {
     const q = query(
       collection(firestore, "messages"),
@@ -45,6 +36,15 @@ export default function ChatInterface() {
     };
     setMessages([defaultMessage, ...userMessages]);
   };
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user) {
+      router.push("/sign-in");
+    } else {
+      fetchMessages();
+    }
+  }, [user, loading, fetchMessages, router]);
 
   useEffect(() => {
     scrollToBottom();

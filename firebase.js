@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics, isSupported } from "firebase/analytics";
+//import { getAnalytics, isSupported } from "firebase/analytics";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,17 +25,17 @@ const firestore = getFirestore(app)
 const auth = getAuth(app);
 // const db = getFirestore(app);
 
-let analytics;
+// let analytics;
 
-if (typeof window !== 'undefined') {
-  // Check if analytics is supported in this environment
-  isSupported().then(supported => {
-    if (supported) {
-      analytics = getAnalytics(app);
-    }
-  }).catch(err => {
-    console.error('Error initializing Firebase Analytics:', err);
-  });
-}
+// if (typeof window !== 'undefined') {
+//   // Check if analytics is supported in this environment
+//   isSupported().then(supported => {
+//     if (supported) {
+//       analytics = getAnalytics(app);
+//     }
+//   }).catch(err => {
+//     console.error('Error initializing Firebase Analytics:', err);
+//   });
+// }
 
-export { auth, firestore, firebaseConfig, analytics };
+export { auth, firestore, firebaseConfig,  }; //analytics
